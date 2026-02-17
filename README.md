@@ -28,6 +28,7 @@ It provides both a lightweight **Command Line Interface (CLI)** and a modern **G
 This project serves as a practical implementation of fundamental computer science concepts. It avoids Python's built-in `eval()` function, opting instead to manually parse strings, manage operator precedence, and evaluate results using a Last-In-First-Out (LIFO) stack mechanism.
 
 **Core Capabilities:**
+
 - Handles complex nested parentheses.
 - Respects mathematical order of operations (PEMDAS).
 - Supports right-associative operators (like exponentiation).
@@ -37,21 +38,24 @@ This project serves as a practical implementation of fundamental computer scienc
 ## ✨ Key Features
 
 ### ⚙️ Core Engine
+
 - **Custom Stack Implementation:** A pure Python implementation of the Stack data structure with standard operations (`push`, `pop`, `peek`, `is_empty`).
 - **RPN Conversion:** Converts standard Infix notation (e.g., $A + B$) to Reverse Polish Notation (e.g., $A B +$).
 - **Precise Evaluation:** Step-by-step evaluation of Postfix strings.
 
 ### 🧮 Supported Operations
-| Symbol | Operation | Associativity |
-| :---: | :--- | :--- |
-| `+` | Addition | Left |
-| `-` | Subtraction | Left |
-| `*` | Multiplication | Left |
-| `/` | Division | Left |
-| `^` | Exponentiation | **Right** |
-| `( )` | Grouping | - |
+
+| Symbol | Operation      | Associativity |
+| :----: | :------------- | :------------ |
+|  `+`   | Addition       | Left          |
+|  `-`   | Subtraction    | Left          |
+|  `*`   | Multiplication | Left          |
+|  `/`   | Division       | Left          |
+|  `^`   | Exponentiation | **Right**     |
+| `( )`  | Grouping       | -             |
 
 ### 🖥️ User Interfaces
+
 1.  **CLI:** Fast, text-based input for quick calculations and debugging.
 2.  **GUI:** A visual calculator interface built with `tkinter` for end-users.
 
@@ -62,13 +66,16 @@ This project serves as a practical implementation of fundamental computer scienc
 The calculator operates in a two-phase pipeline:
 
 ### Phase 1: Infix to Postfix (Parsing)
+
 The engine transforms human-readable expressions into machine-friendly format using a stack to manage operator priority.
 
 **Example Transformation:**
 $$ (A + B) \times C \rightarrow A B + C \times $$
 
 ### Phase 2: Postfix Evaluation (Calculation)
+
 The Postfix expression is traversed from left to right:
+
 1.  **Operands** (numbers) are pushed onto the stack.
 2.  **Operators** pop the top two elements, perform the calculation, and push the result back.
 3.  The final remaining element is the answer.
@@ -76,6 +83,7 @@ The Postfix expression is traversed from left to right:
 ---
 
 ## 📂 Project Architecture
+
 ```text
 stack-expression-calculator/
 ├── calculator/                 # Core Logic Package
@@ -96,11 +104,13 @@ stack-expression-calculator/
 ├── requirements.txt            # Project Dependencies
 └── README.md                   # Documentation
 ```
+
 ---
 
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - Python **3.10** or higher.
 
 ### Installation
@@ -115,28 +125,29 @@ stack-expression-calculator/
 ## 💻 Usage Guide
 
 ### 1. Command Line Interface (CLI)
+
 Execute the `main.py` script to run the interactive console calculator.
+
 ```bash
 python3 main.py
 ```
+
 **Sample Session:**
 text
-Enter Expression: 3 + 4 * 2 / ( 1 - 5 ) ^ 2
+Enter Expression: 3 + 4 \* 2 / ( 1 - 5 ) ^ 2
 Result: 3.5
 
 ### 2. Graphical User Interface (GUI)
+
 Launch the visual application window.
 
 ```bash
 python3 app.py
 ```
-*Alternatively, run `python gui/app.py` depending on your path configuration.*
 
+_Alternatively, run `python gui/app.py` depending on your path configuration._
 
-
-
-___
-
+---
 
 ## 👤 Author
 
