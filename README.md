@@ -142,7 +142,7 @@ Result: 3.5
 Launch the visual application window.
 
 ```bash
-python3 app.py
+python3 gui/app.py
 ```
 
 _Alternatively, run `python gui/app.py` depending on your path configuration._
