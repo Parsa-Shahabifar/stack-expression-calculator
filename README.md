@@ -118,7 +118,7 @@ stack-expression-calculator/
 1.  **Clone the repository:**
 
 ```bash
-    git clone https://github.com/YOUR_USERNAME/stack-expression-calculator.git
+    git clone https://github.com/Parsa-Shahabifar/stack-expression-calculator.git
     cd stack-expression-calculator
 ```
 
